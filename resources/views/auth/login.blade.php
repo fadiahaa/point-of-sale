@@ -24,7 +24,7 @@
                                     </div>
                                 @endif
 
-                                <form method="POST" action="{{route('login')}}" class="user">
+                                <form method="POST" action="" class="user">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                                     <div class="form-group">
@@ -61,7 +61,7 @@
 
                                 @if (Route::has('register'))
                                     <div class="text-center">
-                                        <a class="small" href="{{ route('register') }}">{{ __('Create an Account!') }}</a>
+                                        <a class="small" href="{{ route('register.registerView') }}">{{ __('Create an Account!') }}</a>
                                     </div>
                                 @endif
                             </div>
