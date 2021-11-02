@@ -57,7 +57,7 @@
 
         <!-- Nav Item - Profile -->
         <li class="nav-item">
-            <a class="nav-link" href="{{route('products.index')}}">
+            <a class="nav-link" href="{{ route('products.index') }}">
                 <i class="fas fa-fw fa-user"></i>
                 <span>{{ __('Products') }}</span>
             </a>

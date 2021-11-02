@@ -9,18 +9,16 @@ class ProductController extends Controller
 {
     public function index()
     {   
-        $products = [
-            [
-                'name' => 'Baju',
-                'price' => 49000,
-                'created_at' => '02/11/21'
-            ],
-            [
-                'name' => 'Celana',
-                'price' => 59000,
-                'created_at' => '02/11/21'
-            ]
-        ];
+        $products = Product::all();
         return view('products.index', compact('products'));
+    }
+
+    public function store(Request $request)
+    {
+        Product::create([
+            'name'  => $request -> name,
+            'price' => $request -> price
+        ]);
+        return back();
     }
 }
